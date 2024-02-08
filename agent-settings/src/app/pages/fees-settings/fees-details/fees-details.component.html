@@ -1,0 +1,98 @@
+<div class="d-flex justify-content-between">
+  <h3 class="d-flex flex-column">
+    <span>
+      <i class="bi-currency-exchange"></i> {{setting.name}}
+    </span>
+    @if (setting.description) {
+      <h6 class="text-secondary mb-0">
+        <span class="ps-4 ms-2">{{setting.description}}</span>
+      </h6>
+    }
+  </h3>
+
+  <div>
+    @if (setting.default == "false") {
+      <button class="btn btn-outline-danger ms-2">
+        <i class="bi-currency-exchange"></i> Make Default
+      </button>
+    }
+
+    @if (setting.status == "Pending") {
+      <a [routerLink]="['/fees/edit']" class="btn btn-outline-danger ms-2">
+        <i class="bi-pencil"></i> Edit
+      </a>
+      <button class="btn btn-outline-danger ms-2">
+        <i class="bi-x-lg"></i> Cancel
+      </button>
+
+      <button class="btn btn-outline-danger ms-2">
+        <i class="bi-check-lg"></i> Approve
+      </button>
+    }
+
+  </div>
+</div>
+
+<app-card>
+  <div class="row">
+    <div class="col">
+      <label class="form-label">Status</label>
+      <span class="form-control">{{setting.status}}</span>
+    </div>
+    <div class="col">
+      <label class="form-label">Crated At</label>
+      <span class="form-control">{{setting.createAt}}</span>
+    </div>
+    <div class="col">
+      <label class="form-label">Crated By</label>
+      <span class="form-control">{{setting.createBy}}</span>
+    </div>
+    <div class="col">
+      <label class="form-label">Approved At</label>
+      <span class="form-control">{{setting.approvedAt == "" ? "Not Now" : setting.approvedAt}}</span>
+    </div>
+    <div class="col">
+      <label class="form-label">Approved By</label>
+      <span class="form-control">{{setting.approvedBy == "" ? "Not Now" : setting.approvedBy}}</span>
+    </div>
+
+  </div>
+</app-card>
+
+<div class="mt-3">
+
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a data-bs-toggle="pill"  data-bs-target="#trxPane" class="nav-link active">
+        <i class="bi-list"></i> Transactions Fees
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a data-bs-toggle="pill"  data-bs-target="#agentList" href="#" class="nav-link">
+        <i class="bi-people"></i> Agents (3)
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a data-bs-toggle="pill"  data-bs-target="#agentAdd" href="#" class="nav-link">
+        <i class="bi-person-add"></i> Add Agent
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3">
+
+    <div class="tab-pane fade show active" id="trxPane">
+      <app-fees-list></app-fees-list>
+    </div>
+
+    <div class="tab-pane fade" id="agentList">
+      <app-agent-list agentCode="BA"></app-agent-list>
+    </div>
+
+    <div class="tab-pane fade" id="agentAdd">
+      <app-agent-add></app-agent-add>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<app-card>
+
+  @for (item of list; track $index) {
+    <div class="row mb-3">
+      <div class="col">
+        <label [ngClass]="{'d-none': $index > 0}" class="form-label" >Agent Code</label>
+        <input type="text" placeholder="Agent Code for Search" class="form-control">
+      </div>
+      <div class="col">
+        <label [ngClass]="{'d-none': $index > 0}" class="form-label">Agent Name</label>
+        <span class="form-control">Agent Name (Auto Fill)</span>
+      </div>
+      <div class="col">
+        <label [ngClass]="{'d-none': $index > 0}" class="form-label">Phone Number</label>
+        <span class="form-control">Phone Number (Auto Fill)</span>
+      </div>
+      <div class="col">
+        <label [ngClass]="{'d-none': $index > 0}" class="form-label">Shop Type</label>
+        <span class="form-control">Shop Type (Auto Fill)</span>
+      </div>
+      <div class="col">
+        <label [ngClass]="{'d-none': $index > 0}" class="form-label">Agent Shop</label>
+        <span class="form-control">Agent Shop (Auto Fill)</span>
+      </div>
+    </div>
+  }
+
+  <div>
+    <button (click)="addAgent()" class="btn btn-outline-danger me-2">
+      <i class="bi-plus-lg"></i> Add More
+    </button>
+
+    <button class="btn btn-outline-danger">
+      <i class="bi-save"></i> Save Agents
+    </button>
+  </div>
+</app-card>

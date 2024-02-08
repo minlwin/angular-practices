@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Shop</th>
+      <th>Shop Type</th>
+      <th>Created At</th>
+      <th>Created By</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (item of agents; track $index) {
+      <tr>
+        <td>{{getCode($index)}}</td>
+        <td>{{item.name}}</td>
+        <td>09181818181</td>
+        <td>{{item.shop}}</td>
+        <td>Mini Store</td>
+        <td>Jan 05, 2024 10:00:00</td>
+        <td>Min Lwin</td>
+      </tr>
+    }
+  </tbody>
+</table>

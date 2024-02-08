@@ -1,0 +1,39 @@
+<app-card [showMergin]="false">
+
+  <h5 class="card-title">Capped Setting</h5>
+
+  <div class="row row-cols-3 mb-3">
+    <div class="col">
+      <label class="form-label">Capped Type</label>
+      <select class="form-select">
+        <option value="Daily">Daily</option>
+        <option value="Daily">Monthly</option>
+      </select>
+    </div>
+    <div class="col">
+      <app-amount-and-percent label="Capped Amount" [showPercent]="false"></app-amount-and-percent>
+    </div>
+  </div>
+
+  <div class="row row-cols-3 gy-3">
+    <div class="col">
+      <app-amount-and-percent label="Transaction Fees" [showPercent]="false"></app-amount-and-percent>
+    </div>
+    <div class="col">
+      <app-amount-and-percent label="Agent Fees" [showPercent]="false"></app-amount-and-percent>
+    </div>
+    <div class="col">
+      <app-amount-and-percent label="CMS Received" [showPercent]="false"></app-amount-and-percent>
+    </div>
+    <div class="col">
+      <app-amount-and-percent label="Provider Fees" [showPercent]="false"></app-amount-and-percent>
+    </div>
+    <div class="col">
+      <app-amount-and-percent label="Super Agent Fees" [showPercent]="false"></app-amount-and-percent>
+    </div>
+    <div class="col">
+      <app-amount-and-percent label="CMS Paid" [showPercent]="false"></app-amount-and-percent>
+    </div>
+  </div>
+
+</app-card>

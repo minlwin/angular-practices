@@ -1,0 +1,75 @@
+[
+  {
+    "id" : "1",
+    "name" : "Default for SA",
+    "status" : "Approved",
+    "agents" : "23",
+    "type" : {"type" : "Super Agent", "name" : "Super Agent (SA)", "code" : "SA"},
+    "default" : "true",
+    "createAt" : "Jan 05, 2024 10:00:00",
+    "createBy" : "Min Lwin",
+    "approvedAt" : "Jan 07, 2024 09:30:00",
+    "approvedBy" : "Min Ye Mon"
+  },
+  {
+    "id" : "2",
+    "name" : "Default for BSA",
+    "status" : "Approved",
+    "agents" : "25",
+    "type" : {"type" : "Super Agent", "name" : "Branch Super Agent (BSA)", "code" : "BSA"},
+    "default" : "false",
+    "createAt" : "Jan 05, 2024 10:00:00",
+    "createBy" : "Min Lwin",
+    "approvedAt" : "Jan 07, 2024 09:30:00",
+    "approvedBy" : "Min Ye Mon"
+  },
+  {
+    "id" : "3",
+    "name" : "Default for CSE",
+    "status" : "Approved",
+    "agents" : "125",
+    "type" : {"type" : "Sale Executive", "name" : "Channel Sale Executive (CSE)", "code" : "CSE"},
+    "default" : "true",
+    "createAt" : "Jan 05, 2024 10:00:00",
+    "createBy" : "Min Lwin",
+    "approvedAt" : "Jan 07, 2024 09:30:00",
+    "approvedBy" : "Min Ye Mon"
+  },
+  {
+    "id" : "4",
+    "name" : "Default for BSE",
+    "status" : "Approved",
+    "agents" : "130",
+    "type" : {"type" : "Sale Executive", "name" : "Branch Sale Executive (BSE)", "code" : "BSE"},
+    "default" : "true",
+    "createAt" : "Jan 05, 2024 10:00:00",
+    "createBy" : "Min Lwin",
+    "approvedAt" : "Jan 07, 2024 09:30:00",
+    "approvedBy" : "Min Ye Mon"
+  },
+  {
+    "id" : "5",
+    "name" : "Default for A",
+    "status" : "Pending",
+    "agents" : "0",
+    "type" : {"type" : "Agent", "name" : "Agent (A)", "code" : "A"},
+    "default" : "true",
+    "createAt" : "Jan 05, 2024 10:00:00",
+    "createBy" : "Min Lwin",
+    "approvedAt" : "",
+    "approvedBy" : ""
+  },
+  {
+    "id" : "6",
+    "name" : "Default for BA",
+    "status" : "Pending",
+    "agents" : "0",
+    "type" : {"type" : "Agent", "name" : "Branch Agent (BA)", "code" : "BA"},
+    "default" : "true",
+    "createAt" : "Jan 05, 2024 10:00:00",
+    "createBy" : "Min Lwin",
+    "approvedAt" : "",
+    "approvedBy" : ""
+  }
+
+]

@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(../node_modules/bootstrap/scss/bootstrap.scss);
+@import url(../node_modules/bootstrap-icons/font/bootstrap-icons.scss);
+
+.search-btns {
+  padding-top: 2rem;
+}
+
+.nav .nav-link.active {
+  background-color: red !important;
+  color: white !important;
+}
+
+.nav .nav-link {
+  color: red !important;
+}
+
+.pagination .page-link.active {
+  background-color: red !important;
+  color: white !important;
+}
+
+.pagination .page-link {
+  color: red !important;
+}
+
+

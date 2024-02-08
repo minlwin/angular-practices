@@ -1,0 +1,35 @@
+<h5 class="mb-3"><i class="bi-activity"></i> Transaction</h5>
+
+<form [formGroup]="form">
+  <div class="mb-3">
+    <label for="#" class="form-label">Transaction Type</label>
+    <select formControlName="transactionType" class="form-select">
+      <option *ngFor="let item of transactionType" [value]="item">{{item}}</option>
+    </select>
+  </div>
+  <div *ngIf="!isNeedToShowTransferTo()" class="mb-3">
+    <label for="#" class="form-label">Provider</label>
+    <select class="form-select">
+      <option *ngFor="let item of providers" [value]="item">{{item}}</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="#" class="form-label">Wallet Type {{isNeedToShowTransferTo() ? 'From' : ''}}</label>
+    <select class="form-select">
+      <option *ngFor="let item of walletTypes" [value]="item">{{item}}</option>
+    </select>
+  </div>
+
+  <div *ngIf="isNeedToShowTransferTo()" class="mb-3">
+    <label for="#" class="form-label">Wallet Type To</label>
+    <select class="form-select">
+      <option *ngFor="let item of walletTypes" [value]="item">{{item}}</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="form-label">Particular</label>
+    <textarea class="form-control"></textarea>
+  </div>
+</form>

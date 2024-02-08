@@ -1,0 +1,28 @@
+{
+  "Agent" : [
+    "Fund Request",
+    "Fund Transfer",
+    "Move Money from MTB",
+    "Move Money to MTB",
+    "Cash In to wallet",
+    "Cash Out for wallet",
+    "Cash Out for Un-Registered",
+    "Send Money",
+    "Send Money to MTB",
+    "Send Money to other banks",
+    "Topup",
+    "Bill Payments",
+    "Electricity Bill"
+  ],
+  "Sale Executive" : [
+    "Fund Request",
+    "Fund Transfer"
+  ],
+  "Super Agent" : [
+    "Fund Out",
+    "Fund Collect",
+    "Fund Transfer",
+    "Move Money from MTB",
+    "Move Money to MTB"
+  ]
+}

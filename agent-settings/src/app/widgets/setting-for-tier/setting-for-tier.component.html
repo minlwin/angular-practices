@@ -1,0 +1,56 @@
+@for (item of settings; track $index) {
+  <div class="mb-3">
+    <app-card [showMergin]="false">
+
+      @if ($index == 0) {
+        <h5 class="card-title">Tier Setting</h5>
+      }
+
+      <div class="row mb-3">
+        <div class="col-4">
+          <app-amount-and-percent label="Range From" [showPercent]="false"></app-amount-and-percent>
+        </div>
+        <div class="col-4">
+          <app-amount-and-percent label="Range To" [showPercent]="false"></app-amount-and-percent>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <app-amount-and-percent label="Transaction Fees"></app-amount-and-percent>
+          </div>
+          <div>
+            <app-amount-and-percent label="Provider Fees"></app-amount-and-percent>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="mb-3">
+            <app-amount-and-percent label="Agent Fees"></app-amount-and-percent>
+          </div>
+          <div>
+            <app-amount-and-percent label="Super Agent Fees"></app-amount-and-percent>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="mb-3">
+            <app-amount-and-percent label="CMS Received"></app-amount-and-percent>
+          </div>
+          <div>
+            <app-amount-and-percent label="CMS Paid"></app-amount-and-percent>
+          </div>
+        </div>
+      </div>
+
+      @if ($index == settings.length - 1) {
+        <div class="mt-4">
+          <button (click)="addTier()" class="btn btn-outline-danger">
+            <i class="bi-plus-lg"></i> Add New Tier
+          </button>
+        </div>
+      }
+    </app-card>
+  </div>
+}

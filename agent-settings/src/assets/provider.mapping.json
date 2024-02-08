@@ -1,0 +1,15 @@
+{
+  "Fund Request" : ["NONE"],
+  "Fund Transfer" : ["NONE"],
+  "Move Money from MTB" : ["MTB"],
+  "Move Money to MTB" : ["MTB"],
+  "Cash In to wallet" : ["NONE"],
+  "Cash Out for wallet" : ["NONE"],
+  "Cash Out for Un-Registered" : ["NONE"],
+  "Send Money" : ["NONE"],
+  "Send Money to MTB" : ["MTB"],
+  "Send Money to other banks" : ["Cetizen", "KBZ", "AYA", "Yoma"],
+  "Topup" : ["2C2P"],
+  "Bill Payments" : ["Cannel +", "Skynet"],
+  "Electricity Bill" : ["YESC", "MESC"]
+}

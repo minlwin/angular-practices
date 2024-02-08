@@ -1,0 +1,78 @@
+<h3>
+  <i class="bi-currency-exchange"></i> Fees Settings
+</h3>
+
+<app-card>
+  <form action="#" class="d-flex">
+    <div class="me-2">
+      <label for="type" class="form-label">Status</label>
+      <select name="#" id="type" class="form-select">
+        <option value="">All Status</option>
+        @for (item of statusList; track $index) {
+          <option [value]="item">{{item}}</option>
+        }
+      </select>
+    </div>
+
+    <div class="me-2">
+      <label for="name" class="form-label">Contract Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Search Name">
+    </div>
+
+    <div class="me-2 search-btns">
+      <button class="btn btn-outline-danger me-1">
+        <i class="bi-search"></i> Search
+      </button>
+
+      <button class="btn btn-outline-danger me-1">
+        <i class="bi-file-spreadsheet"></i> Export
+      </button>
+
+      <a [routerLink]="['/fees', 'edit']" class="btn btn-outline-danger me-1">
+        <i class="bi-plus-lg"></i> Add New
+      </a>
+    </div>
+  </form>
+</app-card>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Setting Name</th>
+      <th>Status</th>
+      <th>Default</th>
+      <th class="text-end">Agents</th>
+      <th>Created At</th>
+      <th>Created By</th>
+      <th>Approved At</th>
+      <th>Approved By</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    @for (item of settingList; track $index) {
+      <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.status}}</td>
+        <td>{{item.default == "true" ? "Yes" : "No"}}</td>
+        <td class="text-end">{{item.agents}}</td>
+        <td>{{item.createAt}}</td>
+        <td>{{item.createBy}}</td>
+        <td>{{item.approvedAt}}</td>
+        <td>{{item.approvedBy}}</td>
+        <td>
+          <a [routerLink]="['/fees', 'details']" [queryParams]="{id : item.id}" class="btn-link mx-2">
+            <i class="bi-send"></i>
+          </a>
+        </td>
+      </tr>
+    }
+
+  </tbody>
+</table>
+
+<div>
+  <app-pagination></app-pagination>
+</div>

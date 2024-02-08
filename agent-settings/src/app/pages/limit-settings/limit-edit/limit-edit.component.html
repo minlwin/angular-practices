@@ -1,0 +1,83 @@
+<h3 class="d-flex justify-content-between">
+  <span>
+    <i class="bi-pencil"></i> Create Limit Setting
+  </span>
+  <a [routerLink]="['/limits', 'details']" [queryParams]="{type : selectedAgent}" class="btn btn-outline-danger">
+    <i class="bi-save"></i> Save Setting
+  </a>
+
+</h3>
+
+<form action="#" class="my-3">
+
+  <app-card>
+    <div class="row">
+      <div class="col">
+        <label for="type" class="form-label">Agent Type</label>
+        <select id="type" #agentTypeSelect (change)="changeAgentType(agentTypeSelect.value)" class="form-select">
+          @for (item of agenTypes; track $index) {
+            <option [value]="item.type">{{item.name}}</option>
+          }
+        </select>
+      </div>
+      <div class="col">
+        <label for="name" class="form-label">Setting Name</label>
+        <input type="text" class="form-control" placeholder="Enter Setting Name">
+      </div>
+      <div class="col-6">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" cols="30" rows="1" placeholder="Enter Description"></textarea>
+      </div>
+    </div>
+  </app-card>
+
+  <h5 class="mt-4 mb-2">
+    <i class="bi-list"></i> Limits for Transaction
+  </h5>
+
+  @for (item of transactionTypes; track $index) {
+    <div class="row mb-2">
+      <div class="col-3">
+        @if ($index == 0) {
+          <label for="type" class="form-label">Transaction Type</label>
+        }
+        <span class="form-control">{{item}}</span>
+      </div>
+
+      <div class="col">
+
+        <div class="row">
+
+          <div class="col">
+            @if ($index == 0) {
+              <label for="type" class="form-label">Minimum Amount</label>
+            }
+            <input type="number" class="form-control" placeholder="Enter Minimum Amount">
+          </div>
+
+          <div class="col">
+            @if ($index == 0) {
+              <label for="type" class="form-label">Maximum Amount</label>
+            }
+            <input type="number" class="form-control" placeholder="Enter Maximum Amount">
+          </div>
+
+          <div class="col">
+            @if ($index == 0) {
+              <label for="type" class="form-label">Daily Limit</label>
+            }
+            <input type="number" class="form-control" placeholder="Enter Daily Limit">
+          </div>
+
+          <div class="col">
+            @if ($index == 0) {
+              <label for="type" class="form-label">Monthly Limit</label>
+            }
+            <input type="number" class="form-control" placeholder="Enter Monthly Limit">
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+
+</form>

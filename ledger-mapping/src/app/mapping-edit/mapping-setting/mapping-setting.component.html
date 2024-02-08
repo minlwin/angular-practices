@@ -1,0 +1,42 @@
+<h5 class="mb-3"><i class="bi-arrow-left-right"></i> GL Account Mapping {{type ? 'for ' + type : ''}}</h5>
+
+<form [formGroup]="form">
+  <div formArrayName="mappings" class="mb-3">
+    <div *ngFor="let item of mappings.controls; index as i" class="row mb-2">
+      <div class="col-3">
+        <label *ngIf="i == 0" class="form-label">Details</label>
+        <input type="text" readonly class="form-control" [formControlName]="i">
+      </div>
+
+      <div class="col">
+        <label *ngIf="i == 0" class="form-label">Debit Account</label>
+        <div class="row gx-2">
+          <div class="col-5">
+            <input type="text" placeholder="Code" class="form-control">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Account Name">
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <label *ngIf="i == 0" class="form-label">Credit Account</label>
+        <div class="row gx-2">
+          <div class="col-5">
+            <input type="text" placeholder="Code" class="form-control">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Account Name">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="d-flex justify-content-end">
+  <button type="button" class="btn btn-danger">
+    <i class="bi-save2"></i> Save Mappings
+  </button>
+</div>

@@ -1,0 +1,59 @@
+<div class="d-flex justify-content-between mb-4">
+  <h3>
+    <i class="bi-arrow-left-right"></i> Transaction - GL Account Mapping
+  </h3>
+
+  <a [routerLink]="['/edit']" class="btn btn-outline-danger">
+    <i class="bi-plus"></i> Add New Mapping
+  </a>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Transaction</th>
+      <th>Provider</th>
+      <th>User Types</th>
+      <th>Details</th>
+      <th>Credit</th>
+      <th>Debit</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr>
+      <td>P2P Transfer</td>
+      <td>-</td>
+      <td>Level 2 - Level 2</td>
+      <td>
+        Transaction Amount
+      </td>
+      <td>202-100-001<br />User Wallet - Level 2</td>
+      <td>202-100-001<br />User Wallet - Level 2</td>
+      <td>
+        <a href="#" class="btn-link">
+          <i class="bi-pencil"></i>
+        </a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>P2P Transfer</td>
+      <td>-</td>
+      <td>Level 2 - Level 3</td>
+      <td>
+        Transaction Amount
+      </td>
+      <td>202-100-001<br />User Wallet - Level 2</td>
+      <td>202-100-002<br />User Wallet - Level 3</td>
+      <td>
+        <a href="#" class="btn-link">
+          <i class="bi-pencil"></i>
+        </a>
+      </td>
+    </tr>
+
+  </tbody>
+</table>

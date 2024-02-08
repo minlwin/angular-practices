@@ -1,0 +1,18 @@
+<div>
+  <label class="form-label text-truncate">{{label}}</label>
+  <div class="row gx-2">
+    <div class="col">
+      <div class="input-group">
+        <input type="number" class="form-control" value="0">
+      </div>
+    </div>
+    @if (showPercent) {
+      <div class="col">
+        <div class="input-group">
+          <input type="number" class="form-control" value="0">
+          <span class="input-group-text">%</span>
+        </div>
+      </div>
+    }
+  </div>
+</div>

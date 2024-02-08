@@ -1,0 +1,58 @@
+[
+  {
+    "id" : "1",
+    "name" : "Primary Contract for Yangon",
+    "description" : "Default Contract for agents who lived in Yangon.",
+    "default" : "true",
+    "agents" : "248",
+    "status" : "Approved",
+    "createAt" : "Jan 05, 2024 11:30:00",
+    "createBy" : "Min Lwin",
+    "approvedAt" : "Jan 05, 2024 13:15:00",
+    "approvedBy" : "Min Ye Mon"
+  },
+  {
+    "id" : "2",
+    "name" : "Primary Contract for Mandalay",
+    "default" : "true",
+    "agents" : "120",
+    "status" : "Approved",
+    "createAt" : "Jan 05, 2024 11:30:00",
+    "createBy" : "Min Lwin",
+    "approvedAt" : "Jan 05, 2024 13:15:00",
+    "approvedBy" : "Min Ye Mon"
+  },
+  {
+    "id" : "3",
+    "name" : "Primary Contract for Nay Pyi Daw",
+    "default" : "true",
+    "agents" : "80",
+    "status" : "Approved",
+    "createAt" : "Jan 05, 2024 11:30:00",
+    "createBy" : "Min Lwin",
+    "approvedAt" : "Jan 05, 2024 13:15:00",
+    "approvedBy" : "Min Ye Mon"
+  },
+  {
+    "id" : "4",
+    "name" : "Contract for Third Party Channels",
+    "default" : "false",
+    "agents" : "150",
+    "status" : "Approved",
+    "createAt" : "Jan 05, 2024 11:30:00",
+    "createBy" : "Min Lwin",
+    "approvedAt" : "Jan 05, 2024 13:15:00",
+    "approvedBy" : "Min Ye Mon"
+  },
+  {
+    "id" : "5",
+    "name" : "Sub Contract for Yangon",
+    "default" : "false",
+    "agents" : "0",
+    "status" : "Pending",
+    "createAt" : "Jan 05, 2024 11:30:00",
+    "createBy" : "Min Lwin",
+    "approvedAt" : "",
+    "approvedBy" : ""
+  }
+]
