@@ -1,0 +1,76 @@
+<div class="container mt-4">
+  <h4>User Balance Control Request</h4>
+
+  <div class="card my-4">
+    <div class="card-body">
+      <h6 class="card-title">Search Request</h6>
+
+      <div class="row">
+        <div class="col-auto">
+          <label class="form-label">Status</label>
+          <select class="form-select">
+            <option value="">All Status</option>
+            <option value="">Pending</option>
+            <option value="">Approved</option>
+            <option value="">Cancel</option>
+          </select>
+        </div>
+
+        <div class="col-auto">
+          <label class="form-label">Date From</label>
+          <input type="date" class="form-control">
+        </div>
+
+        <div class="col-auto">
+          <label class="form-label">Date To</label>
+          <input type="date" class="form-control">
+        </div>
+
+        <div class="col-auto">
+          <label class="form-label">Account Number or Partcular</label>
+          <input type="text" class="form-control" placeholder="Start ignore cases search">
+        </div>
+
+        <div style="padding-top: 2rem;" class="col">
+          <button class="btn btn-primary me-2">Search</button>
+          <button class="btn btn-danger">Export</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Request ID</th>
+        <th>Account No.</th>
+        <th>Account Name</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Request At</th>
+        <th>Request By</th>
+        <td>Approve At</td>
+        <td>Approve By</td>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of list; track $index) {
+        <tr>
+          <td>20231206000{{item}}</td>
+          <td>100-100-001</td>
+          <td>Account Name</td>
+          <td>Deposit</td>
+          <td>300,000</td>
+          <td>05/12/2023 15:00:15</td>
+          <td>Request User</td>
+          <td></td>
+          <td></td>
+          <td>Pending</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+</div>

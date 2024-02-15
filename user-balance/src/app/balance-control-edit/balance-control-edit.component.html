@@ -1,0 +1,62 @@
+<div class="container mt-4">
+  <h4>Create User Balance Control Request</h4>
+
+  <div class="card mt-4">
+    <div class="card-body">
+      <h6 class="card-title">GL Account</h6>
+      <div class="row mb-3">
+        <div class="col-3">
+          <label class="form-label">GL Number</label>
+          <input type="text" value="100-100-001" class="form-control">
+        </div>
+        <div class="col">
+          <label class="form-label">GL Account Name</label>
+          <span class="form-control">Auto Fill</span>
+        </div>
+        <div class="col-3">
+          <label class="form-label">Request</label>
+          <select class="form-select">
+            <option value="">Deposit</option>
+            <option value="">Witndraw</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col">
+          <label class="form-label">Particular</label>
+          <input type="text" placeholder="Enter Particular" class="form-control">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h5 class="mt-4">Wallets</h5>
+
+  @for (item of list; track $index) {
+    <div class="row mb-2">
+      <div class="col-3">
+        <label *ngIf="$index == 0" class="form-label">Phone</label>
+        <input type="text" placeholder="Enter Phone Number" class="form-control">
+      </div>
+      <div class="col-6">
+        <label *ngIf="$index == 0" class="form-label">Customer Name</label>
+        <span class="form-control">Auto Fill</span>
+      </div>
+
+      <div class="col">
+        <label *ngIf="$index == 0" class="form-label">Amount</label>
+        <input type="number" class="form-control">
+      </div>
+
+    </div>
+  }
+
+  <div class="mt-3">
+    <button (click)="addNew()" class="btn btn-primary me-2">
+      Add New Request
+    </button>
+    <a [routerLink]="['/', 'history']" class="btn btn-danger">
+      Save Requests
+    </a>
+  </div>
+</div>
