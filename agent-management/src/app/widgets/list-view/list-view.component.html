@@ -1,0 +1,19 @@
+<main>
+  <!-- Search -->
+  <section class="card">
+    <div class="card-body">
+      <ng-content select="[search]"></ng-content>
+    </div>
+  </section>
+
+  <!-- Result List -->
+  <section class="my-3">
+    <ng-content select="[list]"></ng-content>
+  </section>
+
+  <!-- Pagination -->
+  <app-pagination></app-pagination>
+
+</main>
+
+

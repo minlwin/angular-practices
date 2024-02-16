@@ -1,0 +1,102 @@
+<app-page icon="bi-people" title="Agent Management">
+
+  <div actions>
+    <a [routerLink]="['/agents', 'edit']" class="btn btn-outline-dark">
+      <i class="bi-plus-lg"></i> Create
+    </a>
+
+    <button class="btn btn-outline-dark ms-1">
+      <i class="bi-arrow-up"></i> Import
+    </button>
+
+    <button class="btn btn-outline-dark ms-1">
+      <i class="bi-arrow-down"></i> Export
+    </button>
+  </div>
+
+  <app-list-view>
+    <form action="#" search class="row row-cols-5 g-3">
+      <app-search-form-group label="Agent Type" class="col">
+        <select class="form-select">
+          <option value="">All Type</option>
+        </select>
+      </app-search-form-group>
+      <app-search-form-group label="Status" class="col">
+        <select class="form-select">
+          <option value="">All Status</option>
+        </select>
+      </app-search-form-group>
+      <app-search-form-group label="Region" class="col">
+        <select class="form-select">
+          <option value="">All Region</option>
+        </select>
+      </app-search-form-group>
+      <app-search-form-group label="District" class="col">
+        <select class="form-select">
+          <option value="">All District</option>
+        </select>
+      </app-search-form-group>
+      <app-search-form-group label="Township" class="col">
+        <select class="form-select">
+          <option value="">All Township</option>
+        </select>
+      </app-search-form-group>
+
+      <app-search-form-group label="Date From" class="col">
+        <input type="date" class="form-control" >
+      </app-search-form-group>
+      <app-search-form-group label="Date To" class="col">
+        <input type="date" class="form-control" >
+      </app-search-form-group>
+
+      <app-search-form-group label="Parent" class="col">
+        <input type="text" class="form-control" placeholder="Parent Code">
+      </app-search-form-group>
+      <app-search-form-group label="Agent" class="col">
+        <input type="text" class="form-control" placeholder="Agent Code">
+      </app-search-form-group>
+
+      <div class="btn-wrapper">
+        <button class="btn btn-outline-dark">
+          <i class="bi-search"></i> Search
+        </button>
+      </div>
+    </form>
+
+    <table class="table table-bordered" list>
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Agent Type</th>
+          <th>Phone</th>
+          <th>NRC</th>
+          <th>Address</th>
+          <th>Status</th>
+          <th>Create At</th>
+          <th>Create By</th>
+          <th class="text-center"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>SA-000001</td>
+          <td>Aung Aung</td>
+          <td>Super Agent</td>
+          <td>09-1122-3333</td>
+          <td>12/YAKANA(N)001122</td>
+          <td>Yangon, Kamayut</td>
+          <td>New</td>
+          <td>02/15/2024 12:00</td>
+          <td>Nilar Aung</td>
+          <td class="text-center">
+            <a href="#" class="icon-link">
+              <i class="bi-gear"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </app-list-view>
+</app-page>

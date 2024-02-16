@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a href="#" class="navbar-brand">
+      <i class="bi-house"></i> Admin Home
+    </a>
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a [routerLink]="['/agents']" routerLinkActive="active" class="nav-link">
+          <i class="bi-people"></i> Agent Management
+        </a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+          <i class="bi-gear"></i> Change Requests
+        </a>
+
+        <ul class="dropdown-menu">
+          <li>
+            <a [routerLink]="['/requests', 'phone']" routerLinkActive="active" class="dropdown-item">
+              <i class="bi-telephone"></i> Phone Changes
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/requests', 'mapping']" routerLinkActive="active" class="dropdown-item">
+              <i class="bi-bookmark"></i> Mapping Changes
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/requests', 'fees']" routerLinkActive="active" class="dropdown-item">
+              <i class="bi-cash-coin"></i> Fees Plan Changes
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/requests', 'limit']" routerLinkActive="active" class="dropdown-item">
+              <i class="bi-check2-square"></i> Limit Plan Changes
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/requests', 'status']" routerLinkActive="active" class="dropdown-item">
+              <i class="bi-shield"></i> Status Changes
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link">
+          <i class="bi-lock"></i> Sign Out
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

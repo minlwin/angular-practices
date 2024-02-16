@@ -1,0 +1,14 @@
+<div class="container-fluid my-3">
+  <h5 class="d-flex justify-content-between">
+    <span>
+      <i [class]="icon"></i> {{title}}
+    </span>
+    <div>
+      <ng-content select="[actions]"></ng-content>
+    </div>
+  </h5>
+</div>
+
+<div class="container-fluid">
+  <ng-content></ng-content>
+</div>
