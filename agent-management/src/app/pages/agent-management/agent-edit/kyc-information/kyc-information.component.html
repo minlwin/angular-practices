@@ -1,0 +1,82 @@
+<div class="row">
+  <!-- Personal Information -->
+  <div class="col">
+    <div class="row row-cols-3 g-3 mb-3">
+      <app-search-form-group label="Agent Type">
+        <select #typeSelect class="form-select" (change)="changeAgentType(typeSelect.value)">
+          <option value="">Select Agent Type</option>
+          @for (item of agentTypes; track $index) {
+            <option [value]="item.code">{{item.code}} - {{item.name}}</option>
+          }
+        </select>
+      </app-search-form-group>
+
+      <app-search-form-group label="Agent Name">
+        <input type="text" class="form-control" placeholder="Enter Agent Name">
+      </app-search-form-group>
+
+      @if (showParent) {
+        <app-search-form-group label="Parent">
+          <select class="form-select">
+            <option value="">Select Parent</option>
+          </select>
+        </app-search-form-group>
+      } @else {
+        <div></div>
+      }
+
+      <app-search-form-group label="Nationality">
+        <input type="email" class="form-control" placeholder="Enter Nationality" >
+      </app-search-form-group>
+
+      <app-search-form-group label="Gender">
+        <select class="form-select">
+          <option value="">Select Gender</option>
+        </select>
+      </app-search-form-group>
+
+      <app-search-form-group label="Date of Birth">
+        <input type="date" class="form-control" >
+      </app-search-form-group>
+
+      <app-search-form-group label="Agent Phone">
+        <input type="text" class="form-control" placeholder="Enter Phone Number">
+      </app-search-form-group>
+
+      <app-search-form-group label="Email Address">
+        <input type="email" class="form-control" placeholder="Enter Email Address" >
+      </app-search-form-group>
+
+      <app-search-form-group label="Father Name">
+        <input type="email" class="form-control" placeholder="Enter Father Name" >
+      </app-search-form-group>
+
+      <app-search-form-group label="Occupation">
+        <input type="email" class="form-control" placeholder="Enter Occupation" >
+      </app-search-form-group>
+
+      <app-search-form-group label="Contact Person">
+        <input type="email" class="form-control" placeholder="Enter Contact Person" >
+      </app-search-form-group>
+
+      <app-search-form-group label="Contact Phone">
+        <input type="email" class="form-control" placeholder="Enter Contact Phone" >
+      </app-search-form-group>
+    </div>
+
+    <app-search-form-group label="Remark">
+      <textarea class="form-control" cols="30" rows="4"></textarea>
+    </app-search-form-group>
+</div>
+
+  <!-- ID Card Files -->
+  <div class="col-3">
+    <label class="form-label">Agent Photo</label>
+
+    <img src="/assets/photos/profile.jpg" class="img-fluid mb-3" alt="">
+
+    <button class="btn btn-outline-dark d-block w-100">
+      <i class="bi-camera"></i> Upload Profile Image
+    </button>
+  </div>
+</div>

@@ -6,25 +6,78 @@
     </button>
   </div>
 
-  <!-- Navigation -->
-  <ul class="nav nav-underline">
-    <li class="nav-item">
-      <a href="#" class="nav-link active">
-        <i class="bi-person"></i> KYC Information
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link">
-        <i class="bi-shop"></i> Agent Shop
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link">
-        <i class="bi-files-alt"></i> Other Documents
-      </a>
-    </li>
-  </ul>
+  <app-card>
+    <!-- Navigation -->
+    <ul class="nav nav-underline">
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#kycInfo">
+          <i class="bi-person"></i> Personal Information
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#identity">
+          <i class="bi-person-badge"></i> Identity
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#address">
+          <i class="bi-pin-map"></i> Address
+        </a>
+      </li>
+      @if (agentType != 'BSE' && agentType != 'CSE') {
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#shopInfo">
+            <i class="bi-shop"></i> Agent Shop
+          </a>
+        </li>
+      }
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#limitSetting">
+          <i class="bi-shield"></i> Limit Setting
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#feesSetting">
+          <i class="bi-cash"></i> Fees Setting
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#otherDocuments">
+          <i class="bi-files-alt"></i> Other Documents
+        </a>
+      </li>
+    </ul>
 
-  <!-- Content -->
+    <!-- Content -->
+    <div class="tab-content pt-3">
+      <div id="kycInfo" class="tab-pane fade show active">
+        <app-kyc-information (agentTypeChangeEvent)="changeAgentType($event)"></app-kyc-information>
+      </div>
+
+      <div id="identity" class="tab-pane fade">
+        <app-identity></app-identity>
+      </div>
+
+      <div id="address" class="tab-pane fade">
+        <app-address></app-address>
+      </div>
+
+      <div id="shopInfo" class="tab-pane fade">
+        <app-shop-information></app-shop-information>
+      </div>
+
+      <div id="limitSetting" class="tab-pane fade">
+        <app-limit-plan></app-limit-plan>
+      </div>
+
+      <div id="feesSetting" class="tab-pane fade">
+        <app-fees-plan></app-fees-plan>
+      </div>
+
+      <div id="otherDocuments" class="tab-pane fade">
+        <app-other-documents></app-other-documents>
+      </div>
+    </div>
+  </app-card>
 
 </app-page>
