@@ -1,0 +1,32 @@
+[
+  {
+    "code" : "SA",
+    "type" : "Super Agent",
+    "name" : "Super Agent"
+  },
+  {
+    "code" : "BSA",
+    "type" : "Super Agent",
+    "name" : "Branch Super Agent"
+  },
+  {
+    "code" : "CSE",
+    "type" : "Sale Executive",
+    "name" : "Channel Sale Executive"
+  },
+  {
+    "code" : "BSE",
+    "type" : "Sale Executive",
+    "name" : "Branch Sale Executive"
+  },
+  {
+    "code" : "A",
+    "type" : "Agent",
+    "name" : "Agent"
+  },
+  {
+    "code" : "BA",
+    "type" : "Agent",
+    "name" : "Branch Agent"
+  }
+]

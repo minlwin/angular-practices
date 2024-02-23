@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand bg-info-subtle">
+    <div class="container">
+        <span class="navbar-brand">
+            <i class="bi-signal"></i> Using Signal
+        </span>
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a [routerLink]="['/basic']" routerLinkActive="active" class="nav-link">
+                  Basic Signal
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a [routerLink]="['/inputs']" routerLinkActive="active" class="nav-link">
+                Signal Inputs
+              </a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-3">
+  <router-outlet></router-outlet>
+</div>

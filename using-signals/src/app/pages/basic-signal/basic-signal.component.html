@@ -1,0 +1,21 @@
+<h4>Basic Usage of Signals</h4>
+
+<div class="row">
+  <div class="col-3">
+    <ul class="nav flex-column nav-pills">
+      <li class="nav-item">
+        <a [routerLink]="['calculator']" routerLinkActive="active"  class="nav-link">
+          Calculator
+        </a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['shopping']" routerLinkActive="active" class="nav-link">
+          Shopping Cart
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>

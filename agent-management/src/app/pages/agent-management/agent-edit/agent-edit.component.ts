@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { WidgetsModule } from '../../../widgets/widgets.module';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { KycInformationComponent } from './kyc-information/kyc-information.component';
@@ -20,7 +20,7 @@ export class AgentEditComponent {
 
   title = "Create Agent"
 
-  agentType = ''
+  agentType = signal<string>("SA")
 
   constructor(route:ActivatedRoute) {
     route.queryParamMap.subscribe(map => {
@@ -31,6 +31,8 @@ export class AgentEditComponent {
   }
 
   changeAgentType(type:string) {
-    this.agentType = type
+    if(type) {
+      this.agentType.set(type)
+    }
   }
 }

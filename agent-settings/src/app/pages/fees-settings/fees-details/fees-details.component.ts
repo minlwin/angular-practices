@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CardComponent } from '../../../widgets/card/card.component';
 import { FeesListComponent } from '../../../widgets/fees-list/fees-list.component';
 import { AgentListComponent } from '../../../widgets/agent-list/agent-list.component';
 import { AgentAddComponent } from '../../../widgets/agent-add/agent-add.component';
 import { FeesSettingService } from '../../../services/fees-setting.service';
-import { TransactionTypeService } from '../../../services/transaction-type.service';
 
 @Component({
   selector: 'app-fees-details',

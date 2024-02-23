@@ -13,10 +13,10 @@
   <app-card>
     <div class="row">
       <div class="col">
-        <label for="type" class="form-label">Agent Type</label>
+        <label for="type" #typeSelect class="form-label">Agent Type</label>
         <select id="type" #agentTypeSelect (change)="changeAgentType(agentTypeSelect.value)" class="form-select">
           @for (item of agenTypes; track $index) {
-            <option [value]="item.type">{{item.name}}</option>
+            <option [value]="item.code">{{item.name}}</option>
           }
         </select>
       </div>
@@ -31,53 +31,85 @@
     </div>
   </app-card>
 
-  <h5 class="mt-4 mb-2">
-    <i class="bi-list"></i> Limits for Transaction
-  </h5>
+  <div class="mt-3">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <button type="button" data-bs-toggle="pill"  data-bs-target="#trxPane" class="nav-link active">
+          <i class="bi-list"></i> Transactions
+        </button>
+      </li>
+      <li class="nav-item">
+        <button type="button" data-bs-toggle="pill" data-bs-target="#agentPane" class="nav-link">
+          <i class="bi-people"></i> Agents (3)
+        </button>
+      </li>
+      <li class="nav-item">
+        <button type="button" data-bs-toggle="pill" data-bs-target="#addAgentPane" class="nav-link">
+          <i class="bi-person-add"></i> Add Agent
+        </button>
+      </li>
+    </ul>
+  </div>
 
-  @for (item of transactionTypes; track $index) {
-    <div class="row mb-2">
-      <div class="col-3">
-        @if ($index == 0) {
-          <label for="type" class="form-label">Transaction Type</label>
+  <div class="tab-content mt-3">
+    <div class="tab-pane fade show active" id="trxPane">
+      <app-card>
+        @for (item of transactionTypes; track $index) {
+          <div class="row mb-2">
+            <div class="col-3">
+              @if ($index == 0) {
+                <label for="type" class="form-label">Transaction Type</label>
+              }
+              <span class="form-control">{{item}}</span>
+            </div>
+
+            <div class="col">
+
+              <div class="row">
+
+                <div class="col">
+                  @if ($index == 0) {
+                    <label for="type" class="form-label">Minimum Amount</label>
+                  }
+                  <input type="number" class="form-control" placeholder="Enter Minimum Amount">
+                </div>
+
+                <div class="col">
+                  @if ($index == 0) {
+                    <label for="type" class="form-label">Maximum Amount</label>
+                  }
+                  <input type="number" class="form-control" placeholder="Enter Maximum Amount">
+                </div>
+
+                <div class="col">
+                  @if ($index == 0) {
+                    <label for="type" class="form-label">Daily Limit</label>
+                  }
+                  <input type="number" class="form-control" placeholder="Enter Daily Limit">
+                </div>
+
+                <div class="col">
+                  @if ($index == 0) {
+                    <label for="type" class="form-label">Monthly Limit</label>
+                  }
+                  <input type="number" class="form-control" placeholder="Enter Monthly Limit">
+                </div>
+              </div>
+            </div>
+          </div>
         }
-        <span class="form-control">{{item}}</span>
-      </div>
-
-      <div class="col">
-
-        <div class="row">
-
-          <div class="col">
-            @if ($index == 0) {
-              <label for="type" class="form-label">Minimum Amount</label>
-            }
-            <input type="number" class="form-control" placeholder="Enter Minimum Amount">
-          </div>
-
-          <div class="col">
-            @if ($index == 0) {
-              <label for="type" class="form-label">Maximum Amount</label>
-            }
-            <input type="number" class="form-control" placeholder="Enter Maximum Amount">
-          </div>
-
-          <div class="col">
-            @if ($index == 0) {
-              <label for="type" class="form-label">Daily Limit</label>
-            }
-            <input type="number" class="form-control" placeholder="Enter Daily Limit">
-          </div>
-
-          <div class="col">
-            @if ($index == 0) {
-              <label for="type" class="form-label">Monthly Limit</label>
-            }
-            <input type="number" class="form-control" placeholder="Enter Monthly Limit">
-          </div>
-        </div>
-      </div>
+      </app-card>
     </div>
-  }
+
+    <div class="tab-pane fade" id="agentPane">
+      <app-agent-list [agentCode]="shortCode"></app-agent-list>
+    </div>
+
+    <div class="tab-pane fade" id="addAgentPane">
+      <app-agent-add></app-agent-add>
+    </div>
+
+  </div>
+
 
 </form>

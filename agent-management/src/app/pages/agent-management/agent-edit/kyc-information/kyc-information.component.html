@@ -4,9 +4,8 @@
     <div class="row row-cols-3 g-3 mb-3">
       <app-search-form-group label="Agent Type">
         <select #typeSelect class="form-select" (change)="changeAgentType(typeSelect.value)">
-          <option value="">Select Agent Type</option>
           @for (item of agentTypes; track $index) {
-            <option [value]="item.code">{{item.code}} - {{item.name}}</option>
+            <option [value]="item.code">{{item.name}} ({{item.code}})</option>
           }
         </select>
       </app-search-form-group>

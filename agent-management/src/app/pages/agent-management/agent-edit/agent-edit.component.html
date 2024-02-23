@@ -24,13 +24,18 @@
           <i class="bi-pin-map"></i> Address
         </a>
       </li>
-      @if (agentType != 'BSE' && agentType != 'CSE') {
+      @if (agentType() != 'BSE' && agentType() != 'CSE') {
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="tab" data-bs-target="#shopInfo">
             <i class="bi-shop"></i> Agent Shop
           </a>
         </li>
       }
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#otherDocuments">
+          <i class="bi-files-alt"></i> Other Documents
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#limitSetting">
           <i class="bi-shield"></i> Limit Setting
@@ -39,11 +44,6 @@
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#feesSetting">
           <i class="bi-cash"></i> Fees Setting
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#otherDocuments">
-          <i class="bi-files-alt"></i> Other Documents
         </a>
       </li>
     </ul>
@@ -67,7 +67,7 @@
       </div>
 
       <div id="limitSetting" class="tab-pane fade">
-        <app-limit-plan></app-limit-plan>
+        <app-limit-plan [agentType]="agentType()"></app-limit-plan>
       </div>
 
       <div id="feesSetting" class="tab-pane fade">

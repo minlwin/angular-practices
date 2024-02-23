@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title"><i class="bi-calculator"></i> Calculator </h4>
+
+    <form class="row">
+      <div class="col">
+        <label class="form-label">Digit One</label>
+        <input type="number" #d1 (input)="changeDigitOne(d1.value)" [value]="digitOne()" class="form-control">
+      </div>
+
+      <div class="col-auto btn-wrapper">
+        <div class="pt-1">
+          <i class="bi-plus-lg"></i>
+        </div>
+      </div>
+
+      <div class="col">
+        <label class="form-label">Digit Two</label>
+        <input #d2 (input)="changeDigitTwo(d2.value)" [value]="digitTwo()" type="number" class="form-control">
+      </div>
+
+      <div class="col-auto btn-wrapper">
+        <div class="pt-1">
+          =
+        </div>
+      </div>
+
+      <div class="col">
+        <label class="form-label">Digit Two</label>
+        <div class="form-control">
+          {{result()}}
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

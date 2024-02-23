@@ -45,6 +45,18 @@
           <i class="bi-plus-lg"></i> Add Transaction
         </a>
       </li>
+
+      <li class="nav-item">
+        <a data-bs-toggle="pill"  data-bs-target="#agentList" href="#" class="nav-link">
+          <i class="bi-people"></i> Agents (3)
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a data-bs-toggle="pill"  data-bs-target="#agentAdd" href="#" class="nav-link">
+          <i class="bi-person-add"></i> Add Agent
+        </a>
+      </li>
     </ul>
 
     <div class="tab-content mt-3">
@@ -55,6 +67,14 @@
 
       <div class="tab-pane fade" id="addPane">
         <app-fees-add></app-fees-add>
+      </div>
+
+      <div class="tab-pane fade" id="agentList">
+        <app-agent-list agentCode="BA"></app-agent-list>
+      </div>
+
+      <div class="tab-pane fade" id="agentAdd">
+        <app-agent-add></app-agent-add>
       </div>
 
     </div>

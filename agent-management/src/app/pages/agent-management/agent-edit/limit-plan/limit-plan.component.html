@@ -1,1 +1,42 @@
-<p>limit-plan works!</p>
+<div class="row">
+  <app-search-form-group class="col-3" label="Limit Plan">
+    <select class="form-select">
+      <option value="">Super Agent (Default)</option>
+    </select>
+  </app-search-form-group>
+
+  <app-search-form-group class="col-3" label="Approved At">
+    <span class="form-control">02/15/2024 10:00</span>
+  </app-search-form-group>
+
+  <app-search-form-group class="col" label="Description">
+    <span class="form-control">Default plan for Super Agent.</span>
+  </app-search-form-group>
+
+</div>
+
+<div class="mt-3">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Transaction</th>
+        <th class="text-end">Minimum</th>
+        <th class="text-end">Maximum</th>
+        <th class="text-end">Daily Limit</th>
+        <th class="text-end">Monthly Limit</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (item of transactionTypes; track $index) {
+        <tr>
+          <td>{{item}}</td>
+          <td class="text-end">1,000 MMK</td>
+          <td class="text-end">250,000,000 MMK</td>
+          <td class="text-end">5,000,000 MMK</td>
+          <td class="text-end">150,000,000 MMK</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
