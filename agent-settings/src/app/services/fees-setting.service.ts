@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import settings from '../../assets/fees-settings.json'
-import { Observable, filter, map, of } from 'rxjs';
+import { Observable, map, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

@@ -1,0 +1,30 @@
+$primary: #2D9596;
+$secondary: #9AD0C2;
+$success: #F1FADA;
+$danger: #265073;
+
+$theme-colors: (
+  "primary" : $primary,
+  "secondary" : $secondary,
+  "success" : $success,
+  "danger" : $danger
+);
+
+$bootstrap-icons-font-src: url("../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff");
+
+// Required
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons";
+
+html, body {
+  height: 100%;
+}
+
+.side-bar {
+  background-color: $primary;
+  color: $success;
+}
+
+.side-bar.open {
+  width: 320px;
+}

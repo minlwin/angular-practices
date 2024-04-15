@@ -1,0 +1,115 @@
+[
+  {
+    "name" : "Consumer Wallet",
+    "path" : "consumer",
+    "icon" : "bi-wallet",
+    "menus" : [
+      {
+        "icon" : "bi-people",
+        "name" : "Wallet Management",
+        "path" : ["/consumer", "accounts"]
+      },
+      {
+        "icon" : "bi-shield",
+        "name" : "Kyc Management",
+        "path" : ["/consumer", "kyc"]
+      },
+      {
+        "icon" : "bi-send",
+        "name" : "Transaction Management",
+        "path" : ["/consumer", "transaction"]
+      },
+      {
+        "icon" : "bi-bar-chart",
+        "name" : "Accounting Reports",
+        "path" : ["/consumer", "report"]
+      },
+      {
+        "icon" : "bi-gear",
+        "name" : "Settings",
+        "path" : ["/consumer", "setting"]
+      }
+    ]
+  },
+  {
+    "name" : "Agent Management",
+    "path" : "agent",
+    "icon" : "bi-shop",
+    "menus" : [
+      {
+        "icon" : "bi-people",
+        "name" : "Agent Management",
+        "path" : ["/agent", "accounts"]
+      },
+      {
+        "icon" : "bi-shield",
+        "name" : "Kyc Management",
+        "path" : ["/agent", "kyc"]
+      },
+      {
+        "icon" : "bi-send",
+        "name" : "Transaction Management",
+        "path" : ["/agent", "transaction"]
+      },
+      {
+        "icon" : "bi-bar-chart",
+        "name" : "Accounting Reports",
+        "path" : ["/agent", "report"]
+      },
+      {
+        "icon" : "bi-gear",
+        "name" : "Settings",
+        "path" : ["/agent", "setting"]
+      }
+    ]
+  },
+  {
+    "name" : "Ledger Management",
+    "icon" : "bi-folder",
+    "path" : "ledgers",
+    "menus" : [
+      {
+        "icon" : "bi-list",
+        "name" : "Ledger Master",
+        "path" : ["/ledger", "lists"]
+      },
+      {
+        "icon" : "bi-bookmarks",
+        "name" : "Wallet Ledger Mapping",
+        "path" : ["/ledger", "consumer-mapping"]
+      },
+      {
+        "icon" : "bi-bookmarks-fill",
+        "name" : "Agent Ledger Mapping",
+        "path" : ["/ledger", "agent-mapping"]
+      },
+      {
+        "icon" : "bi-bar-chart",
+        "name" : "Accounting Reports",
+        "path" : ["/ledger", "report"]
+      }
+    ]
+  },
+  {
+    "name" : "User Management",
+    "icon" : "bi-people",
+    "path" : "users",
+    "menus" : [
+      {
+        "icon" : "bi-people",
+        "name" : "Web Users",
+        "path" : ["/users", "list"]
+      },
+      {
+        "icon" : "bi-database",
+        "name" : "Feature Master",
+        "path" : ["/users", "features"]
+      },
+      {
+        "icon" : "bi-shield",
+        "name" : "Roles & Permissions",
+        "path" : ["/users", "roles"]
+      }
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+<div class="row row-cols-4 g-3">
+  @for (item of menus(); track $index) {
+    <app-sub-menu [menu]="item"></app-sub-menu>
+  }
+</div>

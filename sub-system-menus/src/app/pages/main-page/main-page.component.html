@@ -1,0 +1,21 @@
+<div class="container mt-4">
+
+  <h3>
+    <i class="bi-wallet"></i> Wallet Management System
+  </h3>
+
+  <ul class="nav nav-underline">
+    @for (item of subSystems(); track $index) {
+      <li class="nav-item">
+        <a class="nav-link" (click)="changeSubSystem($index)" [class.active]="$index == selectedIndex()">
+          <i [class]="item.icon"></i> {{item.name}}
+        </a>
+      </li>
+    }
+  </ul>
+
+  <div class="mt-4">
+    <app-sub-system-menu [menus]="selectedSystem().menus"></app-sub-system-menu>
+  </div>
+
+</div>
